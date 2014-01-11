@@ -7,7 +7,7 @@ arch=('any')
 url="http://qguv.github.io/rpcalc/"
 license=('GPL3')
 depends=('python>=3.3')
-makedepends=('git')
+makedepends=('git', 'python-docopt>=0.6')
 conflicts=('rpcalc')
 provides=('rpcalc')
 source=("$pkgname"::git://github.com/qguv/rpcalc.git)
