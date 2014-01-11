@@ -6,8 +6,8 @@ pkgdesc="A reverse polish notation calculator written in Python 3."
 arch=('any')
 url="http://qguv.github.io/rpcalc/"
 license=('GPL3')
-depends=('python>=3.3')
-makedepends=('git', 'python-docopt>=0.6')
+depends=('python>=3.3', 'python-docopt>=0.6')
+makedepends=('git')
 conflicts=('rpcalc')
 provides=('rpcalc')
 source=("$pkgname"::git://github.com/qguv/rpcalc.git)
