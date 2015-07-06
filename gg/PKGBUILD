@@ -1,18 +1,19 @@
 # Maintainer: Quint Guvernator <quint@guvernator.net>
 
-pkgname="gg"
-pkgver="0.1.0"
+pkgname=gg
+pkgver=0.1.0
 pkgrel=1
-pkgdesc="shuts down the system in anger"
-arch=("any")
-url="https://github.com/qguv/$pkgname"
-license=("Apache")
-depends=("bash", "shutdown")
-source=("$pkgname-$pkgver.tar.gz::https://github.com/qguv/gg/tarball/v0.1.0")
-sha256sums=("77b6626dd9b172b4460c30f81a3c88ab36c2f4af7bdaaa7da8c12e4bf8fa3e9c")
+
+pkgdesc='Shuts down the system in anger.'
+url='https://github.com/qguv/gg'
+arch=('any')
+license=('Apache')
+
+depends=('bash')
+source=("https://github.com/qguv/gg/archive/v$pkgver.tar.gz")
+sha256sums=('6caf81be5237330e4e79cdeafb050fdbd4a0a0baf7f840bae54aa96c098c2ee8')
 
 package() {
-        cd "$pkgname-$pkgver"
-        cp "gg" "$pkgdir/usr/bin/gg"
-        chmod a+x "$pkgdir/usr/bin/gg"
+	cd gg-"$pkgver"
+	install -Dm755 gg "$pkgdir"/usr/bin/gg
 }
