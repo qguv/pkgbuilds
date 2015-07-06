@@ -6,13 +6,13 @@ pkgrel=1
 pkgdesc="shuts down the system in anger"
 arch=("any")
 url="https://github.com/qguv/$pkgname"
-license=('Apache 2.0')
+license=("Apache")
 depends=("bash", "shutdown")
 source=("$pkgname-$pkgver.tar.gz::https://github.com/qguv/gg/tarball/v0.1.0")
 sha256sums=("77b6626dd9b172b4460c30f81a3c88ab36c2f4af7bdaaa7da8c12e4bf8fa3e9c")
 
 package() {
         cd "$pkgname-$pkgver"
-        cp gg "$pkgdir/usr/bin/gg"
+        cp "gg" "$pkgdir/usr/bin/gg"
         chmod a+x "$pkgdir/usr/bin/gg"
 }
