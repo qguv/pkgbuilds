@@ -1,7 +1,7 @@
 # Maintainer: Quint Guvernator <quint@guvernator.net>
 
 pkgname=gg
-pkgver=0.1.0
+pkgver=0.2.0
 pkgrel=1
 
 pkgdesc='Shuts down the system in anger.'
@@ -11,7 +11,7 @@ license=('Apache')
 
 depends=('bash')
 source=("https://github.com/qguv/gg/archive/v$pkgver.tar.gz")
-sha256sums=('6caf81be5237330e4e79cdeafb050fdbd4a0a0baf7f840bae54aa96c098c2ee8')
+sha256sums=('5ab51b7eeea5f1830cc95e24817df111cc10c6fa5e764ff0a4fce8c0bec0eb25')
 
 package() {
 	cd gg-"$pkgver"
