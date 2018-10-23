@@ -1,0 +1,36 @@
+# Maintainer: Quint Guvernator <quint@guvernator.net>
+pkgname=epsilon
+pkgver=1.7.1
+pkgrel=1
+pkgdesc="operating system SDK and simulator for Numworks calculators"
+arch=('any')
+url="http://github.com/numworks/epsilon"
+license=('CCPL')
+depends=('fltk')
+makedepends=(
+  'arm-none-eabi-gcc'
+  'bison'
+  'flex'
+  'freetype2'
+  'libpng'
+  'make'
+)
+optdepends=('dfu-util: for uploading firmware to a physical calculator')
+source=("${pkgname}::git://github.com/numworks/epsilon#tag=1.7.1")
+md5sums=('SKIP')
+
+build() {
+  cd "$srcdir/$pkgname"
+
+  make PLATFORM=simulator clean
+  make PLATFORM=simulator
+}
+
+package() {
+  cd "$srcdir/$pkgname"
+
+  install -dm755 "$pkgdir/usr/bin"
+  install -m755 epsilon.elf "$pkgdir/usr/bin/$pkgname"
+}
+
+# vim:set ts=2 sw=2 et:
