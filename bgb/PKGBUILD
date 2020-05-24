@@ -7,10 +7,10 @@ pkgdesc='Game Boy emulator with advanced debugger'
 arch=(x86_64)
 url=https://bgb.bircd.org
 depends=(wine)
-source=("$pkgname-$pkgver.zip::https://bgb.bircd.org/bgbw64.zip"
+source=("$pkgname-$pkgver.zip::https://bgb.bircd.org/bgb.zip"
         $pkgname)
 noextract=("$pkgname-$pkgver.zip")
-md5sums=('d7757282623a00f232b21bada0490c6a'
+md5sums=('15b8b380c45f8cbe9e598f7224fd341e'
          'c5f34b057c0c5452011dc13b3c60fe94')
 
 prepare() {
